@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title}"></title>
+</head>
+
+<body>
+
+    <h1 th:text="${title}"></h1>
+    
+    <section style="display: flex;">
+        <p><Strong>Name:</Strong></p>
+        <p th:text="${name}"></p>
+    </section>
+
+    <section style="display: flex;">
+        <p><Strong>Lastname:</Strong></p>
+        <p th:text="${lastname}"></p>
+    </section>
+
+</body>
+
+</html>
