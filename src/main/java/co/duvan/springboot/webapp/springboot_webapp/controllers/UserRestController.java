@@ -1,6 +1,9 @@
 package co.duvan.springboot.webapp.springboot_webapp.controllers;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,9 +17,22 @@ import co.duvan.springboot.webapp.springboot_webapp.model.dto.UserDto;
 @RequestMapping("/api")
 public class UserRestController {
 
+    @GetMapping("details-list")
+    public List<User> detilsList() {
+
+        List<User> listUser = new ArrayList<>();
+
+        listUser.add(new User("Darío", "González"));
+        listUser.add(new User("Darío", "González"));
+        listUser.add(new User("Katha", "Suárez"));
+
+        return listUser;
+
+    }
+
     @GetMapping("/details-dto")
     public UserDto detailsDto() {
-        
+
         return new UserDto("Hello word fron UserDto", new User("Duván", "Castillo"));
 
     }
@@ -34,5 +50,5 @@ public class UserRestController {
         return body;
 
     }
-    
+
 }
